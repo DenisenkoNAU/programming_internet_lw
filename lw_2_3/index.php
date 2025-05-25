@@ -37,11 +37,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
   <meta charset="UTF-8">
   <title>Форма реєстрації</title>
   <link rel="stylesheet" href="./css/index.css">
 </head>
+
 <body>
   <h2>Форма реєстрації</h2>
 
@@ -56,39 +58,40 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <?php endif; ?>
 
   <div class="form-card">
-        
-  <form method="POST">
-    <label>Імʼя користувача:
-      <input type="text" name="username" value="<?= htmlspecialchars($userData['користувач'] ?? '') ?>">
-    </label>
+    <form method="POST">
+      <label>Імʼя користувача:
+        <input type="text" name="username" value="<?= htmlspecialchars($userData['користувач'] ?? '') ?>">
+      </label>
 
-    <label>Імʼя:
-      <input type="text" name="first_name" value="<?= htmlspecialchars($userData['імʼя'] ?? '') ?>">
-    </label>
+      <label>Імʼя:
+        <input type="text" name="first_name" value="<?= htmlspecialchars($userData['імʼя'] ?? '') ?>">
+      </label>
 
-    <label>Прізвище:
-      <input type="text" name="last_name" value="<?= htmlspecialchars($userData['прізвище'] ?? '') ?>">
-    </label>
+      <label>Прізвище:
+        <input type="text" name="last_name" value="<?= htmlspecialchars($userData['прізвище'] ?? '') ?>">
+      </label>
 
-    <label>E-mail:
-      <input type="email" name="email" value="<?= htmlspecialchars($userData['email'] ?? '') ?>">
-    </label>
+      <label>E-mail:
+        <input type="email" name="email" value="<?= htmlspecialchars($userData['email'] ?? '') ?>">
+      </label>
 
-    <label>Пароль:
-      <input type="password" name="password">
-    </label>
+      <label>Пароль:
+        <input type="password" name="password">
+      </label>
 
-    <label>Адреса:
-      <input type="text" name="address" value="<?= htmlspecialchars($userData['адреса'] ?? '') ?>">
-    </label>
+      <label>Адреса:
+        <input type="text" name="address" value="<?= htmlspecialchars($userData['адреса'] ?? '') ?>">
+      </label>
 
-    <label>Телефон:
-      <input type="text" name="phone" value="<?= htmlspecialchars($userData['телефон'] ?? '') ?>">
-    </label>
+      <label>Телефон:
+        <input type="text" name="phone" value="<?= htmlspecialchars($userData['телефон'] ?? '') ?>">
+      </label>
 
-    <br><br>
-    <button type="submit">Зареєструватись</button>
-  </form>
+      <br />
+
+      <button type="submit">Зареєструватись</button>
+    </form>
   </div>
 </body>
+
 </html>

@@ -8,5 +8,8 @@
     "express-xml-bodyparser": "^0.3.0",
     "helmet": "^8.1.0",
     "xml2js": "^0.6.2"
+  },
+  "scripts": {
+    "start": "node ./src/server.js"
   }
 }

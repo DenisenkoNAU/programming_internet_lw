@@ -39,13 +39,16 @@ if (isset($_POST['generate'])) {
 
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
   <meta charset="UTF-8">
   <title>Математичний тест з калькулятором</title>
   <link rel="stylesheet" href="./css/index.css" />
 </head>
+
 <body>
   <h1 class="center">Математичний тест</h1>
+
   <hr>
 
   <form method="POST" class="center">
@@ -86,22 +89,25 @@ if (isset($_POST['generate'])) {
     <table class="center" id="keyboard">
       <?php for ($i = 1; $i <= 9; $i++): ?>
         <?php if ($i % 3 === 1): ?><tr><?php endif; ?>
-            <td>
+          <td>
             <button
                 class="calc-button"
                 id="b<?= $i ?>"
                 name="digit"
                 value="<?= $i ?>"
             ><?= $i ?></button>
-            </td>
+          </td>
         <?php if ($i % 3 === 0): ?></tr><?php endif; ?>
-        <?php endfor; ?>
+      <?php endfor; ?>
       <tr>
         <td><button class="calc-button" id="b0" name="digit" value="0">0</button></td>
         <td colspan="2"><button id="bs" class="calc-button" name="ok">OK</button></td>
       </tr>
     </table>
   </form>
+
   <hr>
+
 </body>
+
 </html>

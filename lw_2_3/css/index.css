@@ -21,7 +21,6 @@ body {
   padding: 32px 24px 40px;
 }
 
-/* ===== ЗАГОЛОВОК ============================================= */
 h2 {
   text-align: center;
   margin-top: 0;
@@ -29,11 +28,10 @@ h2 {
   font-size: 1.6rem;
 }
 
-/* ===== ПОЛЯ ФОРМИ ============================================ */
 label {
   display: block;
   font-weight: 600;
-  margin-bottom: 4px;
+  margin-bottom: 12px;
 }
 
 input[type="text"],
@@ -45,6 +43,7 @@ input[type="password"] {
   border-radius: 6px;
   font-size: 0.95rem;
   transition: border-color 0.2s;
+  margin-top: 6px;
 }
 
 input:focus {
@@ -57,10 +56,9 @@ input:focus {
   margin-bottom: 18px;
 }
 
-/* ===== КНОПКА ================================================ */
 button[type="submit"] {
   width: 100%;
-  background: #007bff;
+  background-color: #007bff;
   border: none;
   color: #fff;
   padding: 12px 0;
@@ -68,18 +66,17 @@ button[type="submit"] {
   font-weight: 600;
   border-radius: 6px;
   cursor: pointer;
-  transition: background 0.2s, transform 0.1s;
+  transition: background-color 0.2s, transform 0.1s;
 }
 
 button[type="submit"]:hover {
-  background: #0069d9;
+  background-color: #0069d9;
 }
 
 button[type="submit"]:active {
   transform: translateY(1px);
 }
 
-/* ===== ПОВІДОМЛЕННЯ ПРО ПОМИЛКИ ============================== */
 .error {
   background: #ffe9e9;
   border: 1px solid #ffbdbd;
