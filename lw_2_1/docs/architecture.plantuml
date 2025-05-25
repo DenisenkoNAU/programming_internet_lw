@@ -1,0 +1,34 @@
+@startuml
+skinparam componentStyle rectangle
+
+package "Interface" {
+  [controller/*.controller.js] as Controllers
+  [routes/*.route.js] as Routes
+  [middlewares/*.middlewares.js] as Middlewares
+}
+
+package "Application" {
+  [service/*.service.js] as Services
+}
+
+package "Infrastructure" {
+  [service/*.strategy.js] as Strategies
+}
+
+package "Domain / Entity" {
+  [models/*.model.js] as Models
+}
+
+package "External" {
+  [data/*] as ExternalStorage
+}
+
+Routes --> Controllers
+Middlewares --> Controllers
+Controllers --> Services
+
+Services --> Strategies
+
+Strategies --> Models
+Strategies --> ExternalStorage
+@enduml

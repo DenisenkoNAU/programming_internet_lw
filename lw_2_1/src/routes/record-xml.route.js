@@ -1,14 +1,14 @@
 const express = require('express');
 const router = express.Router();
 
-const { body, param } = require('express-validator');
+const { param } = require('express-validator');
 
-const xmlparser = require('../middlewares/parser/parser-xml.midelware');
+const xmlparser = require('../middlewares/parser/parser-xml.middelware');
 const {
   validateXmlRecordCreate,
   validateXmlRecordUpdate,
-} = require('../middlewares/validation/validate-xml-record.midelware');
-const validateRoute = require('../middlewares/validation/validate-route.midelware');
+} = require('../middlewares/validation/validate-xml-record.middelware');
+const validateRoute = require('../middlewares/validation/validate-route.middelware');
 
 const controller = require('../controllers/record-xml.controller');
 

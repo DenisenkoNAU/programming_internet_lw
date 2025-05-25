@@ -36,10 +36,20 @@ class RecordStrategy {
     return data[index];
   };
 
+  /**
+   * Возвращает все записи из источника данных
+   * @name IRecordStorageStrategy#getAll
+   * @returns {Promise<Array<Object>>}
+   */
   async getAll() {
     return this.strategy.getAll();
   }
 
+  /**
+   * Создаёт новую запись
+   * @param {Object} payload
+   * @returns {Promise<Object>} новая запись
+   */
   async create(payload) {
     const data = await this.strategy.getAll();
     const { newRecord } = this._mapCreateRecord(data, payload);
@@ -49,6 +59,12 @@ class RecordStrategy {
     return newRecord;
   }
 
+  /**
+   * Обновляет запись по ID
+   * @param {string} id
+   * @param {Object} payload
+   * @returns {Promise<Object>} обновлённая запись
+   */
   async update(id, payload) {
     const data = await this.strategy.getAll();
 
@@ -59,6 +75,11 @@ class RecordStrategy {
     return updateRecord;
   };
 
+  /**
+   * Удаляет запись по ID
+   * @param {string} id
+   * @returns {Promise<void>}
+   */
   async remove(id) {
     const data = await this.getAll();
     const index = this._getRecordIndex(data, id);

@@ -3,7 +3,7 @@ const router = express.Router();
 
 const { body, param } = require('express-validator');
 
-const validateRoute = require('../middlewares/validation/validate-route.midelware');
+const validateRoute = require('../middlewares/validation/validate-route.middelware');
 
 const controller = require('../controllers/record-json.controller');
 

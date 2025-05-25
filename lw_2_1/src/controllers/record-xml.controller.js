@@ -1,4 +1,4 @@
-const withErrorHandler = require('../utils/with-error-handler');
+const withErrorHandler = require('../middlewares/with-error-handler.middelware');
 const recordService = require('../service/record/record.service');
 
 const getAll = withErrorHandler(async (req, res) => {
