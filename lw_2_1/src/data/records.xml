@@ -1,1 +1,10 @@
-<records/>
+<records>
+  <record>
+    <name>test xml</name>
+    <lastname>test</lastname>
+    <surname>test</surname>
+    <education>test</education>
+    <faculty>engineering</faculty>
+    <id>1748191652849</id>
+  </record>
+</records>

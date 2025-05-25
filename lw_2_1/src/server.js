@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const bodyParser = require('body-parser');
 const helmet = require('helmet');
 const cors = require('cors');
@@ -11,6 +12,9 @@ const xmlRoutes = require('./routes/record-xml.route');
 
 const PORT = 3000;
 const app = express();
+
+// Добавляем статику
+app.use(express.static(path.join(__dirname, './public')));
 
 /** Security */
 // XSS, clickjacking, MIME sniffing

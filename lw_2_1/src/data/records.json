@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "name": "test 1 Json",
+    "lastname": "Прізвище",
+    "surname": "По батьков",
+    "education": "місце навчання",
+    "faculty": "computer_science",
+    "id": "1748191607043"
+  },
+  {
+    "name": "test 21",
+    "lastname": "test",
+    "surname": "test",
+    "education": "test",
+    "faculty": "economics",
+    "id": "1748191712979"
+  }
+]

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Анкета вступника</title>
+  <link rel="stylesheet" href="./css/index.css" />
+</head>
+
+<body>
+  <h2>Анкета вступника</h2>
+  <form id="studentForm">
+    <div class="df">
+      <fieldset class="df-col">
+        <legend>Особиста інформація</legend>
+        <div class="row">
+          <div class="col-label">
+            <label for="first_name">Ім'я:</label>
+          </div>
+          <div class="col-value">
+            <input type="text" id="first_name" name="first_name" required />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-label">
+            <label for="last_name">Прізвище:</label>
+          </div>
+          <div class="col-value">
+            <input type="text" id="last_name" name="last_name" required />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-label">
+            <label for="middle_name">По батькові:</label>
+          </div>
+          <div class="col-value">
+            <input type="text" id="middle_name" name="middle_name" required />
+          </div>
+        </div>
+      </fieldset>
+      <div class="df-col">
+        <fieldset>
+          <legend>Навчальний заклад</legend>
+          <div class="row">
+            <div class="col-label">
+              <label for="previous_school">Попереднє місце навчання:</label>
+            </div>
+            <div class="col-value">
+              <input type="text" id="previous_school" name="previous_school" required />
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Вибір факультету</legend>
+          <div class="row">
+            <div class="col-label">
+              <label for="faculty">Оберіть факультет:</label>
+            </div>
+            <div class="col-value">
+              <select id="faculty" name="faculty" required>
+                <optgroup label="Технічні науки">
+                  <option value="computer_science">Комп'ютерні науки</option>
+                  <option value="engineering">Інженерія</option>
+                </optgroup>
+                <optgroup label="Гуманітарні науки">
+                  <option value="economics">Економіка</option>
+                  <option value="law">Право</option>
+                </optgroup>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+
+    <div class="row-action">
+      <button type="button" onclick="clearForm()">Очистити Форму</button>
+      <button type="button" onclick="saveData()">Зберегти JSON</button>
+      <button type="button" onclick="saveXML()">Зберегти XML</button>
+    </div>
+  </form>
+
+  <div class="table table-json">
+    <table>
+      <caption>JSON Students</caption>
+      <thead>
+        <tr>
+          <td>
+            Ім'я
+          </td>
+          <td>
+            Прізвище
+          </td>
+          <td>
+            По батькові
+          </td>
+          <td>
+            Попереднє місце навчання
+          </td>
+          <td>
+            Факультет
+          </td>
+          <td></td>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="table table-xml">
+    <table>
+      <caption>XML Students</caption>
+      <thead>
+        <tr>
+          <td>
+            Ім'я
+          </td>
+          <td>
+            Прізвище
+          </td>
+          <td>
+            По батькові
+          </td>
+          <td>
+            Попереднє місце навчання
+          </td>
+          <td>
+            Факультет
+          </td>
+          <td></td>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+
+  <script src="./js/index.js"></script>
+</body>
+
+</html>
